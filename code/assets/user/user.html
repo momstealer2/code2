@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Account | MERSSH Jewellery</title>
+    <meta name="description" content="Manage your MERSSH Jewellery account.">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    
+    <!-- Phosphor Icons -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../../style.css">
+    <!-- User Specific CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Top Announcement Bar -->
+    <div class="top-bar">
+        <div class="top-bar-content">
+            <span class="shipping-notice"><i class="ph ph-truck"></i> FREE SHIPPING on orders above ₹999 ✨</span>
+            <div class="top-bar-links">
+                <span><i class="ph ph-money"></i> COD Available</span>
+                <span><i class="ph ph-arrow-counter-clockwise"></i> Easy Returns</span>
+                <span><i class="ph ph-map-pin"></i> Track Order</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Header -->
+    <header class="header">
+        <div class="header-container">
+            <button class="mobile-menu-btn" aria-label="Menu">
+                <i class="ph ph-list"></i>
+            </button>
+            
+            <a href="../../index.html" class="logo">
+                MERSSH <span>JEWELLERY</span>
+            </a>
+
+            <nav class="desktop-nav">
+                <ul class="nav-links">
+                    <li><a href="../../index.html">HOME</a></li>
+                    <li>
+                        <a href="#">SHOP <i class="ph ph-caret-down"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">RINGS</a></li>
+                            <li><a href="#">NECKLACES</a></li>
+                            <li><a href="#">EARRINGS</a></li>
+                            <li><a href="#">BRACELETS</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">COLLECTIONS</a></li>
+                    <li><a href="#">BEST SELLERS</a></li>
+                    <li><a href="#">NEW ARRIVALS</a></li>
+                    <li><a href="#">ABOUT US</a></li>
+                </ul>
+            </nav>
+
+            <div class="header-icons">
+                <a href="#" aria-label="Search"><i class="ph ph-magnifying-glass"></i></a>
+                <a href="user.html" aria-label="Account"><i class="ph-fill ph-user" style="color: var(--gold);"></i></a>
+                <a href="#" class="cart-icon" aria-label="Cart">
+                    <i class="ph ph-shopping-bag"></i>
+                    <span class="cart-count">0</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- User Account Section -->
+    <section class="user-account-section">
+        <div class="section-header">
+            <h2>MY ACCOUNT</h2>
+            <p>Welcome back</p>
+        </div>
+        
+        <div class="account-container">
+            <!-- Sidebar -->
+            <aside class="account-sidebar">
+                <nav class="account-nav" id="account-nav">
+                    <a href="#" class="active" data-target="profile-details"><i class="ph ph-user"></i> Profile Details</a>
+                    <a href="#" data-target="my-orders"><i class="ph ph-package"></i> My Orders</a>
+                    <a href="#" data-target="wishlist"><i class="ph ph-heart"></i> Wishlist</a>
+                    <a href="#" data-target="saved-addresses"><i class="ph ph-map-pin"></i> Saved Addresses</a>
+                    <a href="#" data-target="notifications"><i class="ph ph-bell"></i> Notifications</a>
+                    <a href="#" class="logout-link"><i class="ph ph-sign-out"></i> Log Out</a>
+                </nav>
+            </aside>
+            
+            <!-- Main Content -->
+            <div class="account-content" id="account-content">
+                <!-- Profile Details Tab -->
+                <div class="account-card tab-content active" id="profile-details">
+                    <h3>Profile Information</h3>
+                    <p class="account-subtitle">View and edit your personal details.</p>
+                    
+                    <form class="account-form">
+                        <div class="form-group floating-label-group">
+                            <input type="text" id="first-name" placeholder=" ">
+                            <label for="first-name">First Name</label>
+                        </div>
+                        <div class="form-group floating-label-group">
+                            <input type="text" id="last-name" placeholder=" ">
+                            <label for="last-name">Last Name</label>
+                        </div>
+                        <div class="form-group floating-label-group">
+                            <input type="email" id="email" placeholder=" ">
+                            <label for="email">Email Address</label>
+                        </div>
+                        <div class="form-group floating-label-group">
+                            <input type="tel" id="phone" placeholder=" ">
+                            <label for="phone">Phone Number</label>
+                        </div>
+                        <button type="submit" class="btn-primary" id="save-profile-btn">SAVE CHANGES</button>
+                    </form>
+                </div>
+
+                <!-- My Orders Tab -->
+                <div class="account-card tab-content" id="my-orders" style="display: none;">
+                    <h3>My Orders</h3>
+                    <p class="account-subtitle">View and track your recent orders.</p>
+                    <div class="empty-state">
+                        <i class="ph ph-package"></i>
+                        <p>You haven't placed any orders yet.</p>
+                        <a href="../../index.html" class="btn-primary">START SHOPPING</a>
+                    </div>
+                </div>
+
+                <!-- Wishlist Tab -->
+                <div class="account-card tab-content" id="wishlist" style="display: none;">
+                    <h3>Wishlist</h3>
+                    <p class="account-subtitle">Items you've loved and saved.</p>
+                    <div class="empty-state">
+                        <i class="ph ph-heart"></i>
+                        <p>Your wishlist is empty.</p>
+                        <a href="../../index.html" class="btn-primary">DISCOVER PIECES</a>
+                    </div>
+                </div>
+                
+                <!-- Saved Addresses Tab -->
+                <div class="account-card tab-content" id="saved-addresses" style="display: none;">
+                    <h3>Saved Addresses</h3>
+                    <p class="account-subtitle">Manage your delivery addresses.</p>
+                    <div class="address-card">
+                        <div class="address-header">
+                            <h4>Home</h4>
+                            <span class="badge">Default</span>
+                        </div>
+                        <p>Jane Doe<br>123 Elegance Street, Apartment 4B<br>Mumbai, Maharashtra 400001<br>India</p>
+                        <div class="address-actions">
+                            <button class="btn-outline">EDIT</button>
+                            <button class="btn-outline text-danger">DELETE</button>
+                        </div>
+                    </div>
+                    <button class="btn-secondary mt-20"><i class="ph ph-plus"></i> ADD NEW ADDRESS</button>
+                </div>
+                
+                <!-- Notifications Tab -->
+                <div class="account-card tab-content" id="notifications" style="display: none;">
+                    <h3>Notifications</h3>
+                    <p class="account-subtitle">Manage your email and SMS preferences.</p>
+                    <div class="toggle-group">
+                        <div class="toggle-item">
+                            <div>
+                                <h4>Order Updates</h4>
+                                <p>Receive updates about your order status.</p>
+                            </div>
+                            <label class="switch">
+                                <input type="checkbox" checked>
+                                <span class="slider round"></span>
+                            </label>
+                        </div>
+                        <div class="toggle-item">
+                            <div>
+                                <h4>Promotions & Offers</h4>
+                                <p>Get notified about new collections and sales.</p>
+                            </div>
+                            <label class="switch">
+                                <input type="checkbox">
+                                <span class="slider round"></span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Mobile Bottom Navigation -->
+    <nav class="mobile-bottom-nav">
+        <ul>
+            <li>
+                <a href="../../index.html" class="nav-item">
+                    <i class="ph ph-house"></i>
+                    <span>Home</span>
+                </a>
+            </li>
+            <li>
+                <a href="#" class="nav-item">
+                    <i class="ph ph-squares-four"></i>
+                    <span>Shop</span>
+                </a>
+            </li>
+            <li>
+                <a href="#" class="nav-item">
+                    <i class="ph ph-diamond"></i>
+                    <span>Collections</span>
+                </a>
+            </li>
+            <li>
+                <a href="#" class="nav-item">
+                    <i class="ph ph-heart"></i>
+                    <span>Wishlist</span>
+                </a>
+            </li>
+            <li>
+                <a href="user.html" class="nav-item active">
+                    <i class="ph-fill ph-user"></i>
+                    <span>Account</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- Mobile Navigation Drawer -->
+    <div class="mobile-drawer-overlay" id="mobileDrawerOverlay"></div>
+    <div class="mobile-drawer" id="mobileDrawer">
+        <div class="drawer-header">
+            <h3>MENU</h3>
+            <button class="close-drawer-btn" id="closeMobileDrawerBtn"><i class="ph ph-x"></i></button>
+        </div>
+        <div class="drawer-body">
+            <ul class="mobile-nav-links">
+                <li><a href="../../index.html">HOME</a></li>
+                <li class="mobile-dropdown">
+                    <a href="#" class="mobile-dropdown-toggle">SHOP <i class="ph ph-caret-down"></i></a>
+                    <ul class="mobile-dropdown-menu">
+                        <li><a href="../../index.html#shop">RINGS</a></li>
+                        <li><a href="../../index.html#shop">NECKLACES</a></li>
+                        <li><a href="../../index.html#shop">EARRINGS</a></li>
+                        <li><a href="../../index.html#shop">BRACELETS</a></li>
+                    </ul>
+                </li>
+                <li><a href="../../index.html#shop">COLLECTIONS</a></li>
+                <li><a href="../../index.html#shop">BEST SELLERS</a></li>
+                <li><a href="../../index.html#shop">NEW ARRIVALS</a></li>
+                <li><a href="../../index.html">ABOUT US</a></li>
+                <li><a href="../../index.html">CONTACT US</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Cart Drawer -->
+    <div class="cart-drawer-overlay" id="cartDrawerOverlay"></div>
+    <div class="cart-drawer" id="cartDrawer">
+        <div class="drawer-header">
+            <h3>YOUR BAG (<span class="cart-drawer-count">0</span>)</h3>
+            <button class="close-drawer-btn" id="closeCartDrawerBtn"><i class="ph ph-x"></i></button>
+        </div>
+        <div class="drawer-body" id="cartDrawerBody">
+            <div class="cart-empty-state" id="cartEmptyState">
+                <i class="ph ph-shopping-bag"></i>
+                <p>Your shopping bag is empty.</p>
+                <a href="../../index.html#shop" class="btn-primary btn-shop-now">START SHOPPING</a>
+            </div>
+            <div class="cart-items-list" id="cartItemsList" style="display: none;">
+                <!-- Dynamic cart items list -->
+            </div>
+        </div>
+        <div class="drawer-footer" id="cartDrawerFooter" style="display: none;">
+            <div class="cart-subtotal">
+                <span>Subtotal</span>
+                <span class="cart-subtotal-value">₹0</span>
+            </div>
+            <p class="shipping-tax-note">Shipping & taxes calculated at checkout</p>
+            <button class="btn-checkout">PROCEED TO CHECKOUT</button>
+        </div>
+    </div>
+
+    <!-- Toast Notification Container -->
+    <div id="toastContainer" class="toast-container"></div>
+
+    <script src="../../script.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
