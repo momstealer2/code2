@@ -1,0 +1,643 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="theme-color" content="#0a0a0a">
+    <title>New Arrivals | MERSSH Jewellery â€” Fresh Drops Every Week</title>
+    <meta name="description" content="Shop the latest new arrivals at MERSSH Jewellery. Fresh Korean anti-tarnish jewellery â€” rings, necklaces, earrings and bracelets added weekly.">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+
+    <!-- Phosphor Icons -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+
+    <!-- New Arrivals CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Top Announcement Bar -->
+    <div class="top-bar">
+        <div class="top-bar-content">
+            <span class="shipping-notice"><i class="ph ph-truck"></i> FREE SHIPPING on orders above &#8377;999 &#10024;</span>
+            <div class="top-bar-links">
+                <span><i class="ph ph-money"></i> COD Available</span>
+                <span><i class="ph ph-map-pin"></i> Track Order</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Header -->
+    <header class="header">
+        <div class="header-container">
+            <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Menu">
+                <i class="ph ph-list"></i>
+            </button>
+
+            <a href="../../index.html" class="logo">
+                MERSSH <span>JEWELLERY</span>
+            </a>
+
+            <nav class="desktop-nav">
+                <ul class="nav-links">
+                    <li><a href="../../index.html">HOME</a></li>
+                    <li>
+                        <a href="#">SHOP <i class="ph ph-caret-down"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#rings">RINGS</a></li>
+                            <li><a href="#necklaces">NECKLACES</a></li>
+                            <li><a href="#earrings">EARRINGS</a></li>
+                            <li><a href="#bracelets">BRACELETS</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="../collection/collection.html">COLLECTIONS</a></li>
+                    <li><a href="../best seller/bestseller.html">BEST SELLERS</a></li>
+                    <li><a href="newarrivals.html" class="active">NEW ARRIVALS</a></li>
+                    <li><a href="../about/about.html">ABOUT US</a></li>
+                </ul>
+            </nav>
+
+            <div class="header-icons">
+                <a href="#" aria-label="Search"><i class="ph ph-magnifying-glass"></i></a>
+                <a href="../user/user.html" aria-label="Account"><i class="ph ph-user"></i></a>
+                <a href="#" class="cart-icon" aria-label="Cart">
+                    <i class="ph ph-shopping-bag"></i>
+                    <span class="cart-count">0</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Breadcrumb -->
+    <div class="breadcrumb">
+        <div class="breadcrumb-inner">
+            <a href="../../index.html">Home</a>
+            <span class="sep"><i class="ph ph-caret-right"></i></span>
+            <span class="current">New Arrivals</span>
+        </div>
+    </div>
+
+    <!-- Page Hero -->
+    <section class="page-hero">
+        <div class="hero-sparkles" aria-hidden="true">
+            <span class="sparkle s1">&#10022;</span>
+            <span class="sparkle s2">&#10022;</span>
+            <span class="sparkle s3">&#10022;</span>
+            <span class="sparkle s4">&#10022;</span>
+            <span class="sparkle s5">&#10022;</span>
+        </div>
+        <div class="page-hero-inner">
+            <span class="page-hero-eyebrow">Fresh Drops &#10022; Weekly</span>
+            <h1>New <span class="accent">Arrivals</span></h1>
+            <p>The latest pieces crafted for timeless elegance â€” drop in every week for something new to love.</p>
+            <div class="hero-badges">
+                <span><i class="ph ph-star"></i> Just Added</span>
+                <span><i class="ph ph-shield-check"></i> Anti-Tarnish</span>
+                <span><i class="ph ph-drop"></i> Waterproof</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Countdown Drop Timer -->
+    <div class="drop-timer-bar">
+        <div class="drop-timer-inner">
+            <span class="drop-label"><i class="ph ph-lightning"></i> Next Drop In:</span>
+            <div class="drop-countdown">
+                <div class="drop-time-block">
+                    <span class="drop-num" id="dropDays">02</span>
+                    <span class="drop-unit">Days</span>
+                </div>
+                <span class="drop-sep">:</span>
+                <div class="drop-time-block">
+                    <span class="drop-num" id="dropHours">14</span>
+                    <span class="drop-unit">Hrs</span>
+                </div>
+                <span class="drop-sep">:</span>
+                <div class="drop-time-block">
+                    <span class="drop-num" id="dropMins">32</span>
+                    <span class="drop-unit">Min</span>
+                </div>
+                <span class="drop-sep">:</span>
+                <div class="drop-time-block">
+                    <span class="drop-num" id="dropSecs">00</span>
+                    <span class="drop-unit">Sec</span>
+                </div>
+            </div>
+            <button class="drop-notify-btn"><i class="ph ph-bell"></i> <span>Notify Me</span></button>
+        </div>
+    </div>
+
+    <!-- Filter Bar -->
+    <div class="filter-bar" id="filterBar">
+        <div class="filter-bar-inner">
+            <div class="filter-tabs" role="tablist" aria-label="Filter new arrivals by category">
+                <button class="filter-tab active" data-filter="all" role="tab" aria-selected="true">ALL</button>
+                <button class="filter-tab" data-filter="rings" role="tab" aria-selected="false">RINGS</button>
+                <button class="filter-tab" data-filter="necklaces" role="tab" aria-selected="false">NECKLACES</button>
+                <button class="filter-tab" data-filter="earrings" role="tab" aria-selected="false">EARRINGS</button>
+                <button class="filter-tab" data-filter="bracelets" role="tab" aria-selected="false">BRACELETS</button>
+            </div>
+            <div class="sort-wrap">
+                <label for="sortSelect" class="sr-only">Sort by</label>
+                <select id="sortSelect" class="sort-select">
+                    <option value="newest">Newest First</option>
+                    <option value="price-asc">Price: Low to High</option>
+                    <option value="price-desc">Price: High to Low</option>
+                    <option value="featured">Featured</option>
+                </select>
+                <i class="ph ph-caret-down sort-icon"></i>
+            </div>
+        </div>
+    </div>
+
+    <!-- Results Bar -->
+    <div class="results-bar">
+        <div class="results-bar-inner">
+            <span id="resultsCount">Showing <strong>12</strong> new arrivals</span>
+            <div class="view-toggle">
+                <button class="view-btn active" id="gridViewBtn" aria-label="Grid view"><i class="ph ph-squares-four"></i></button>
+                <button class="view-btn" id="listViewBtn" aria-label="List view"><i class="ph ph-list-bullets"></i></button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Products Grid -->
+    <section class="products-section">
+        <div class="products-grid" id="productsGrid">
+
+            <!-- RINGS -->
+            <div class="product-card reveal" data-category="rings" data-price="699" id="rings">
+                <div class="product-badge new-badge">NEW</div>
+                <button class="wishlist-btn" aria-label="Add to wishlist"><i class="ph ph-heart"></i></button>
+                <div class="product-img">
+                    <img src="../images/category_rings.png" alt="Twisted Vine Ring">
+                    <div class="quick-view-overlay">
+                        <button class="quick-view-btn">QUICK VIEW</button>
+                    </div>
+                </div>
+                <div class="product-info">
+                    <span class="product-category-tag">Rings</span>
+                    <h4>Twisted Vine Ring</h4>
+                    <div class="product-stars">&#9733;&#9733;&#9733;&#9733;&#9733; <span class="review-count">(8)</span></div>
+                    <div class="price">
+                        <span class="current-price">&#8377;699</span>
+                        <span class="old-price">&#8377;999</span>
+                        <span class="discount-tag">30% OFF</span>
+                    </div>
+                    <button class="btn-add-cart"><i class="ph ph-shopping-cart"></i> ADD TO CART</button>
+                </div>
+            </div>
+
+            <div class="product-card reveal" data-category="rings" data-price="549">
+                <div class="product-badge new-badge">NEW</div>
+                <button class="wishlist-btn" aria-label="Add to wishlist"><i class="ph ph-heart"></i></button>
+                <div class="product-img">
+                    <img src="../images/category_rings.png" alt="Crescent Moon Ring">
+                    <div class="quick-view-overlay">
+                        <button class="quick-view-btn">QUICK VIEW</button>
+                    </div>
+                </div>
+                <div class="product-info">
+                    <span class="product-category-tag">Rings</span>
+                    <h4>Crescent Moon Ring</h4>
+                    <div class="product-stars">&#9733;&#9733;&#9733;&#9733;&#9733; <span class="review-count">(5)</span></div>
+                    <div class="price">
+                        <span class="current-price">&#8377;549</span>
+                        <span class="old-price">&#8377;799</span>
+                        <span class="discount-tag">31% OFF</span>
+                    </div>
+                    <button class="btn-add-cart"><i class="ph ph-shopping-cart"></i> ADD TO CART</button>
+                </div>
+            </div>
+
+            <div class="product-card reveal" data-category="rings" data-price="849">
+                <div class="product-badge trending-badge">TRENDING</div>
+                <button class="wishlist-btn" aria-label="Add to wishlist"><i class="ph ph-heart"></i></button>
+                <div class="product-img">
+                    <img src="../images/category_rings.png" alt="Diamond Illusion Band">
+                    <div class="quick-view-overlay">
+                        <button class="quick-view-btn">QUICK VIEW</button>
+                    </div>
+                </div>
+                <div class="product-info">
+                    <span class="product-category-tag">Rings</span>
+                    <h4>Diamond Illusion Band</h4>
+                    <div class="product-stars">&#9733;&#9733;&#9733;&#9733;&#9734; <span class="review-count">(3)</span></div>
+                    <div class="price">
+                        <span class="current-price">&#8377;849</span>
+                        <span class="old-price">&#8377;1,199</span>
+                        <span class="discount-tag">29% OFF</span>
+                    </div>
+                    <button class="btn-add-cart"><i class="ph ph-shopping-cart"></i> ADD TO CART</button>
+                </div>
+            </div>
+
+            <!-- NECKLACES -->
+            <div class="product-card reveal" data-category="necklaces" data-price="1099" id="necklaces">
+                <div class="product-badge new-badge">NEW</div>
+                <button class="wishlist-btn" aria-label="Add to wishlist"><i class="ph ph-heart"></i></button>
+                <div class="product-img">
+                    <img src="../images/category_necklaces.png" alt="Star Pendant Necklace">
+                    <div class="quick-view-overlay">
+                        <button class="quick-view-btn">QUICK VIEW</button>
+                    </div>
+                </div>
+                <div class="product-info">
+                    <span class="product-category-tag">Necklaces</span>
+                    <h4>Star Pendant Necklace</h4>
+                    <div class="product-stars">&#9733;&#9733;&#9733;&#9733;&#9733; <span class="review-count">(11)</span></div>
+                    <div class="price">
+                        <span class="current-price">&#8377;1,099</span>
+                        <span class="old-price">&#8377;1,599</span>
+                        <span class="discount-tag">31% OFF</span>
+                    </div>
+                    <button class="btn-add-cart"><i class="ph ph-shopping-cart"></i> ADD TO CART</button>
+                </div>
+            </div>
+
+            <div class="product-card reveal" data-category="necklaces" data-price="899">
+                <div class="product-badge new-badge">NEW</div>
+                <button class="wishlist-btn" aria-label="Add to wishlist"><i class="ph ph-heart"></i></button>
+                <div class="product-img">
+                    <img src="../images/category_necklaces.png" alt="Butterfly Charm Necklace">
+                    <div class="quick-view-overlay">
+                        <button class="quick-view-btn">QUICK VIEW</button>
+                    </div>
+                </div>
+                <div class="product-info">
+                    <span class="product-category-tag">Necklaces</span>
+                    <h4>Butterfly Charm Necklace</h4>
+                    <div class="product-stars">&#9733;&#9733;&#9733;&#9733;&#9733; <span class="review-count">(7)</span></div>
+                    <div class="price">
+                        <span class="current-price">&#8377;899</span>
+                        <span class="old-price">&#8377;1,299</span>
+                        <span class="discount-tag">31% OFF</span>
+                    </div>
+                    <button class="btn-add-cart"><i class="ph ph-shopping-cart"></i> ADD TO CART</button>
+                </div>
+            </div>
+
+            <div class="product-card reveal" data-category="necklaces" data-price="749">
+                <div class="product-badge trending-badge">TRENDING</div>
+                <button class="wishlist-btn" aria-label="Add to wishlist"><i class="ph ph-heart"></i></button>
+                <div class="product-img">
+                    <img src="../images/category_necklaces.png" alt="Dainty Bar Necklace">
+                    <div class="quick-view-overlay">
+                        <button class="quick-view-btn">QUICK VIEW</button>
+                    </div>
+                </div>
+                <div class="product-info">
+                    <span class="product-category-tag">Necklaces</span>
+                    <h4>Dainty Bar Necklace</h4>
+                    <div class="product-stars">&#9733;&#9733;&#9733;&#9733;&#9734; <span class="review-count">(4)</span></div>
+                    <div class="price">
+                        <span class="current-price">&#8377;749</span>
+                        <span class="old-price">&#8377;1,099</span>
+                        <span class="discount-tag">32% OFF</span>
+                    </div>
+                    <button class="btn-add-cart"><i class="ph ph-shopping-cart"></i> ADD TO CART</button>
+                </div>
+            </div>
+
+            <!-- EARRINGS -->
+            <div class="product-card reveal" data-category="earrings" data-price="599" id="earrings">
+                <div class="product-badge new-badge">NEW</div>
+                <button class="wishlist-btn" aria-label="Add to wishlist"><i class="ph ph-heart"></i></button>
+                <div class="product-img">
+                    <img src="../images/category_earrings.png" alt="Feather Drop Earrings">
+                    <div class="quick-view-overlay">
+                        <button class="quick-view-btn">QUICK VIEW</button>
+                    </div>
+                </div>
+                <div class="product-info">
+                    <span class="product-category-tag">Earrings</span>
+                    <h4>Feather Drop Earrings</h4>
+                    <div class="product-stars">&#9733;&#9733;&#9733;&#9733;&#9733; <span class="review-count">(14)</span></div>
+                    <div class="price">
+                        <span class="current-price">&#8377;599</span>
+                        <span class="old-price">&#8377;899</span>
+                        <span class="discount-tag">33% OFF</span>
+                    </div>
+                    <button class="btn-add-cart"><i class="ph ph-shopping-cart"></i> ADD TO CART</button>
+                </div>
+            </div>
+
+            <div class="product-card reveal" data-category="earrings" data-price="679">
+                <div class="product-badge new-badge">NEW</div>
+                <button class="wishlist-btn" aria-label="Add to wishlist"><i class="ph ph-heart"></i></button>
+                <div class="product-img">
+                    <img src="../images/category_earrings.png" alt="Celestial Huggie Hoops">
+                    <div class="quick-view-overlay">
+                        <button class="quick-view-btn">QUICK VIEW</button>
+                    </div>
+                </div>
+                <div class="product-info">
+                    <span class="product-category-tag">Earrings</span>
+                    <h4>Celestial Huggie Hoops</h4>
+                    <div class="product-stars">&#9733;&#9733;&#9733;&#9733;&#9733; <span class="review-count">(9)</span></div>
+                    <div class="price">
+                        <span class="current-price">&#8377;679</span>
+                        <span class="old-price">&#8377;999</span>
+                        <span class="discount-tag">32% OFF</span>
+                    </div>
+                    <button class="btn-add-cart"><i class="ph ph-shopping-cart"></i> ADD TO CART</button>
+                </div>
+            </div>
+
+            <div class="product-card reveal" data-category="earrings" data-price="799">
+                <div class="product-badge low-stock-badge">LOW STOCK</div>
+                <button class="wishlist-btn" aria-label="Add to wishlist"><i class="ph ph-heart"></i></button>
+                <div class="product-img">
+                    <img src="../images/category_earrings.png" alt="Vintage Stud Earrings">
+                    <div class="quick-view-overlay">
+                        <button class="quick-view-btn">QUICK VIEW</button>
+                    </div>
+                </div>
+                <div class="product-info">
+                    <span class="product-category-tag">Earrings</span>
+                    <h4>Vintage Stud Earrings</h4>
+                    <div class="product-stars">&#9733;&#9733;&#9733;&#9733;&#9734; <span class="review-count">(6)</span></div>
+                    <div class="price">
+                        <span class="current-price">&#8377;799</span>
+                        <span class="old-price">&#8377;1,199</span>
+                        <span class="discount-tag">33% OFF</span>
+                    </div>
+                    <button class="btn-add-cart"><i class="ph ph-shopping-cart"></i> ADD TO CART</button>
+                </div>
+            </div>
+
+            <!-- BRACELETS -->
+            <div class="product-card reveal" data-category="bracelets" data-price="849" id="bracelets">
+                <div class="product-badge new-badge">NEW</div>
+                <button class="wishlist-btn" aria-label="Add to wishlist"><i class="ph ph-heart"></i></button>
+                <div class="product-img">
+                    <img src="../images/category_bracelets.png" alt="Infinity Link Bracelet">
+                    <div class="quick-view-overlay">
+                        <button class="quick-view-btn">QUICK VIEW</button>
+                    </div>
+                </div>
+                <div class="product-info">
+                    <span class="product-category-tag">Bracelets</span>
+                    <h4>Infinity Link Bracelet</h4>
+                    <div class="product-stars">&#9733;&#9733;&#9733;&#9733;&#9733; <span class="review-count">(12)</span></div>
+                    <div class="price">
+                        <span class="current-price">&#8377;849</span>
+                        <span class="old-price">&#8377;1,249</span>
+                        <span class="discount-tag">32% OFF</span>
+                    </div>
+                    <button class="btn-add-cart"><i class="ph ph-shopping-cart"></i> ADD TO CART</button>
+                </div>
+            </div>
+
+            <div class="product-card reveal" data-category="bracelets" data-price="649">
+                <div class="product-badge trending-badge">TRENDING</div>
+                <button class="wishlist-btn" aria-label="Add to wishlist"><i class="ph ph-heart"></i></button>
+                <div class="product-img">
+                    <img src="../images/category_bracelets.png" alt="Floral Charm Bracelet">
+                    <div class="quick-view-overlay">
+                        <button class="quick-view-btn">QUICK VIEW</button>
+                    </div>
+                </div>
+                <div class="product-info">
+                    <span class="product-category-tag">Bracelets</span>
+                    <h4>Floral Charm Bracelet</h4>
+                    <div class="product-stars">&#9733;&#9733;&#9733;&#9733;&#9733; <span class="review-count">(18)</span></div>
+                    <div class="price">
+                        <span class="current-price">&#8377;649</span>
+                        <span class="old-price">&#8377;949</span>
+                        <span class="discount-tag">32% OFF</span>
+                    </div>
+                    <button class="btn-add-cart"><i class="ph ph-shopping-cart"></i> ADD TO CART</button>
+                </div>
+            </div>
+
+            <div class="product-card reveal" data-category="bracelets" data-price="549">
+                <div class="product-badge new-badge">NEW</div>
+                <button class="wishlist-btn" aria-label="Add to wishlist"><i class="ph ph-heart"></i></button>
+                <div class="product-img">
+                    <img src="../images/category_bracelets.png" alt="Wave Cuff Bracelet">
+                    <div class="quick-view-overlay">
+                        <button class="quick-view-btn">QUICK VIEW</button>
+                    </div>
+                </div>
+                <div class="product-info">
+                    <span class="product-category-tag">Bracelets</span>
+                    <h4>Wave Cuff Bracelet</h4>
+                    <div class="product-stars">&#9733;&#9733;&#9733;&#9733;&#9734; <span class="review-count">(2)</span></div>
+                    <div class="price">
+                        <span class="current-price">&#8377;549</span>
+                        <span class="old-price">&#8377;799</span>
+                        <span class="discount-tag">31% OFF</span>
+                    </div>
+                    <button class="btn-add-cart"><i class="ph ph-shopping-cart"></i> ADD TO CART</button>
+                </div>
+            </div>
+
+        </div><!-- /.products-grid -->
+
+        <!-- No Results -->
+        <div class="no-results" id="noResults" style="display:none;">
+            <i class="ph ph-magnifying-glass"></i>
+            <p>No new arrivals found in this category.</p>
+        </div>
+    </section>
+
+    <!-- Value Props Strip -->
+    <div class="value-strip">
+        <div class="value-strip-inner">
+            <div class="vstrip-item reveal">
+                <i class="ph ph-drop"></i>
+                <div>
+                    <h4>WATERPROOF</h4>
+                    <p>Wear anywhere, anytime.</p>
+                </div>
+            </div>
+            <div class="vstrip-item reveal">
+                <i class="ph ph-shield-check"></i>
+                <div>
+                    <h4>ANTI-TARNISH</h4>
+                    <p>Long-lasting shine.</p>
+                </div>
+            </div>
+            <div class="vstrip-item reveal">
+                <i class="ph ph-leaf"></i>
+                <div>
+                    <h4>LIGHTWEIGHT</h4>
+                    <p>Comfort all day long.</p>
+                </div>
+            </div>
+            <div class="vstrip-item reveal">
+                <i class="ph ph-truck"></i>
+                <div>
+                    <h4>FAST SHIPPING</h4>
+                    <p>Across India, quickly.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Promise CTA -->
+    <section class="promise-section">
+        <div class="promise-inner">
+            <span class="eyebrow">Our Promise to You</span>
+            <h2>Wear It Every Day. <span class="accent">Love It Every Day.</span></h2>
+            <p>We stand behind every piece we sell. If you're ever unhappy with your purchase â€” for any reason â€” reach out and we'll make it right. That's the MERSSH promise.</p>
+            <div class="promise-cta">
+                <a href="../collection/collection.html" class="btn-primary">SHOP ALL COLLECTIONS</a>
+                <a href="mailto:mersshjeweles@gmail.com" class="btn-outline">GET IN TOUCH</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mobile Bottom Navigation -->
+    <nav class="mobile-bottom-nav">
+        <ul>
+            <li>
+                <a href="../../index.html" class="nav-item">
+                    <i class="ph ph-house"></i>
+                    <span>Home</span>
+                </a>
+            </li>
+            <li>
+                <a href="#" class="nav-item">
+                    <i class="ph ph-squares-four"></i>
+                    <span>Shop</span>
+                </a>
+            </li>
+            <li>
+                <a href="../collection/collection.html" class="nav-item">
+                    <i class="ph ph-diamond"></i>
+                    <span>Collections</span>
+                </a>
+            </li>
+            <li>
+                <a href="#" class="nav-item">
+                    <i class="ph ph-heart"></i>
+                    <span>Wishlist</span>
+                </a>
+            </li>
+            <li>
+                <a href="../user/user.html" class="nav-item">
+                    <i class="ph ph-user"></i>
+                    <span>Account</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- Mobile Navigation Drawer -->
+    <div class="mobile-drawer-overlay" id="mobileDrawerOverlay"></div>
+    <div class="mobile-drawer" id="mobileDrawer">
+        <div class="drawer-header">
+            <h3>MENU</h3>
+            <button class="close-drawer-btn" id="closeMobileDrawerBtn"><i class="ph ph-x"></i></button>
+        </div>
+        <div class="drawer-body">
+            <ul class="mobile-nav-links">
+                <li><a href="../../index.html">HOME</a></li>
+                <li class="mobile-dropdown">
+                    <a href="#" class="mobile-dropdown-toggle">SHOP <i class="ph ph-caret-down"></i></a>
+                    <ul class="mobile-dropdown-menu">
+                        <li><a href="#rings">RINGS</a></li>
+                        <li><a href="#necklaces">NECKLACES</a></li>
+                        <li><a href="#earrings">EARRINGS</a></li>
+                        <li><a href="#bracelets">BRACELETS</a></li>
+                    </ul>
+                </li>
+                <li><a href="../collection/collection.html">COLLECTIONS</a></li>
+                <li><a href="../best seller/bestseller.html">BEST SELLERS</a></li>
+                <li><a href="newarrivals.html" class="active-link">NEW ARRIVALS</a></li>
+                <li><a href="../about/about.html">ABOUT US</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-inner">
+            <div class="footer-brand">
+                <span class="logo-footer">MERSSH <span>JEWELLERY</span></span>
+                <p>Premium anti-tarnish Korean jewellery designed for daily elegance. Wear it anywhere, anytime.</p>
+                <div class="footer-social">
+                    <a href="https://www.instagram.com/merssh_jewels?igsh=ZjU3eGIxdXZzN3hv" target="_blank" aria-label="Instagram"><i class="ph ph-instagram-logo"></i></a>
+                    <a href="https://www.facebook.com/share/1BMY25iF7p/" aria-label="Facebook"><i class="ph ph-facebook-logo"></i></a>
+                    <a href="#" aria-label="WhatsApp"><i class="ph ph-whatsapp-logo"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-col">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="../../index.html">Home</a></li>
+                    <li><a href="#">Shop All</a></li>
+                    <li><a href="../best seller/bestseller.html">Best Sellers</a></li>
+                    <li><a href="newarrivals.html">New Arrivals</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>Support</h4>
+                <ul>
+                    <li><a href="#">Track My Order</a></li>
+                    <li><a href="#">Returns &amp; Exchanges</a></li>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>Contact Us</h4>
+                <div class="contact-info">
+                    <p>Email : <a href="mailto:mersshjeweles@gmail.com">mersshjeweles@gmail.com</a></p>
+                    <br>
+                    <p>Phone : <a href="tel:+91.(261).369.1445">+91 (261) 369 1445</a></p>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <span>&copy; 2026 MERSSH Jewellery. All rights reserved.</span>
+            <div>
+                <a href="#">Privacy Policy</a> &nbsp;|&nbsp;
+                <a href="#">Terms of Service</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Cart Drawer -->
+    <div class="cart-drawer-overlay" id="cartDrawerOverlay"></div>
+    <div class="cart-drawer" id="cartDrawer">
+        <div class="drawer-header">
+            <h3>YOUR BAG (<span class="cart-drawer-count">0</span>)</h3>
+            <button class="close-drawer-btn" id="closeCartDrawerBtn"><i class="ph ph-x"></i></button>
+        </div>
+        <div class="drawer-body" id="cartDrawerBody">
+            <div class="cart-empty-state" id="cartEmptyState">
+                <i class="ph ph-shopping-bag"></i>
+                <p>Your shopping bag is empty.</p>
+                <a href="../../index.html#shop" class="btn-primary btn-shop-now">START SHOPPING</a>
+            </div>
+            <div class="cart-items-list" id="cartItemsList" style="display: none;"></div>
+        </div>
+        <div class="drawer-footer" id="cartDrawerFooter" style="display: none;">
+            <div class="cart-subtotal">
+                <span>Subtotal</span>
+                <span class="cart-subtotal-value">&#8377;0</span>
+            </div>
+            <p class="shipping-tax-note">Shipping &amp; taxes calculated at checkout</p>
+            <button class="btn-checkout">PROCEED TO CHECKOUT</button>
+        </div>
+    </div>
+
+    <!-- Toast Container -->
+    <div id="toastContainer" class="toast-container"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
